@@ -1,0 +1,5 @@
+apiVersion: v2
+name: homelab-coredns
+description: Custom CoreDNS config for morrisons.site forwarding
+version: 0.1.0
+appVersion: "1.0.0"
