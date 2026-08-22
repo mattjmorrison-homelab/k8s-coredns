@@ -6,5 +6,11 @@ metadata:
 data:
   morrisons.server: |
     morrisons.site:53 {
-        forward . 192.168.68.84
+        forward . {{ .Values.piholeAddress }}
     }
+  {{- range $host, $ip := .Values.localHosts }}
+  {{ $host }}.server: |
+    {{ $host }}:53 {
+        forward . {{ $.Values.piholeAddress }}
+    }
+  {{- end }}
