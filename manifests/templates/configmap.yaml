@@ -8,3 +8,7 @@ data:
     morrisons.site:53 {
         forward . 192.168.68.84
     }
+  local.server: |
+    local:53 {
+        forward . 192.168.68.84
+    }
